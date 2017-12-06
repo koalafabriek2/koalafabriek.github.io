@@ -90,13 +90,17 @@ footer {
   top: 50px;
 }
 
-.question {
-  text-align: center;
+.List {
+text-align: center;
   position: relative;
   top: 40px;
 }
 
-.answer {
+.List h4 {
+  
+}
+
+.button {
   border: 1px solid #466995;
   margin: 20px;
   display: inline-block;
@@ -104,7 +108,7 @@ footer {
   width: 200px;
 }
 
-.answer:hover {
+.button:hover {
   background: #C0D6DF;
   color: #FFF;
 }
