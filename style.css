@@ -4,8 +4,8 @@ body {
 }
 
 header {
-  background-color: #46FF95;
-  border-bottom: 1px solid #46FF95;
+  background-color: #46FF65;
+  border-bottom: 1px solid #466995;
   position: fixed;
   width: 100%;
   z-index: 10;
@@ -24,13 +24,12 @@ li {
   font-weight: 300;
   text-transform: uppercase;
   display: inline-block;
-  width: 160px;
-  text-align: center;
+  width: 190px;
 }
 
 li:hover {
-  color: #FFFFFF;
-  font-weight: 900;
+  color: #466995;
+  font-weight: bold;
 }
 
 h1 {
