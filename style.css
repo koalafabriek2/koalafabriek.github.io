@@ -24,11 +24,13 @@ li {
   font-weight: 300;
   text-transform: uppercase;
   display: inline-block;
-  width: 80px;
+  width: 160px;
+  text-align: center;
 }
 
 li:hover {
-  color: #DBE9EE;
+  color: #FFFFFF;
+  font-weight: 900;
 }
 
 h1 {
