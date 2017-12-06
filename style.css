@@ -11,24 +11,26 @@ header {
   z-index: 10;
 }
 
-ul top{
+ul.top{
   margin: 30px auto;
   padding: 0 20px;
   text-align: center;
+  position: center;
 }
-
-li top{
+li.top{
   color: #FFF;
   font-family: 'Oswald', sans-serif;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 300;
   text-transform: uppercase;
   display: inline-block;
-  width: 190px;
+  width: 230px;
   position: relative;
+  
 }
 
-li:hover {
+
+li:hover.top {
   color: #466995;
   font-weight: bold;
 }
@@ -46,7 +48,7 @@ h2 {
   font-family: 'Varela Round', sans-serif;
   font-size: 26px;
   font-weight: 100;
-  margin: 0 auto 20px auto;
+  margin: 6% 2px 5px 5px
 }
 
 h3 {
@@ -94,38 +96,42 @@ footer {
 .List {
 text-align: center;
   position: relative;
-  top: 40px;
+  top: 35%;
 }
 
 .List h4 {
-  
+  top: 35%;
 }
 
 .button {
+  position: relative;
   border: 1px solid #466995;
   margin: 20px;
   display: inline-block;
-  height: 150px;
-  width: 200px;
+  height: 10%;
+  width: 30%;
+  left: 35%;
 }
 
 .button:hover {
   background: #C0D6DF;
   color: #FFF;
 }
+
+
 /* Include the padding and border in an element's total width and height */
-* {
-  box-sizing: border-box;
-}
 
 /* Remove margins and padding from the list */
-ul {
-  margin: 0;
-  padding: 0;
+ul.table  {
+  position:relative;
+  margin: 2px;
+  padding: 2px;
+  width: 75%;
+  left: 12.5%;
 }
 
 /* Style the list items */
-ul li {
+ul li.parttable {
   cursor: pointer;
   position: relative;
   padding: 12px 8px 12px 40px;
@@ -133,6 +139,7 @@ ul li {
   background: #eee;
   font-size: 18px;
   transition: 0.2s;
+  
   
   /* make the list items unselectable */
   -webkit-user-select: none;
@@ -142,24 +149,24 @@ ul li {
 }
 
 /* Set all odd list items to a different color (zebra-stripes) */
-ul li:nth-child(odd) {
+ul li.parttable:nth-child(odd)  {
   background: #f9f9f9;
 }
 
 /* Darker background-color on hover */
-ul li:hover {
+ul li.parttable:hover {
   background: #ddd;
 }
 
 /* When clicked on, add a background color and strike out text */
-ul li.checked {
+ul li.parttable.checked {
   background: #888;
   color: #fff;
   text-decoration: line-through;
 }
 
 /* Add a "checked" mark when clicked on */
-ul li.checked::before {
+ul li.parttable.checked::before  {
   content: '';
   position: absolute;
   border-color: #fff;
@@ -185,64 +192,32 @@ ul li.checked::before {
   color: white;
 }
 
-/* Style the header */
-.header {
-  background-color: #f44336;
-  padding: 30px 40px;
-  color: white;
-  text-align: center;
-}
-
-/* Clear floats after the header */
-.header:after {
-  content: "";
-  display: table;
-  clear: both;
-}
 
 /* Style the input */
 input {
-  border: none;
+  position:relative;
+  border: 2px;
   width: 75%;
+  left: 12.5%;
   padding: 10px;
-  float: left;
   font-size: 16px;
+  background-color:lightgrey;
 }
 
 /* Style the "Add" button */
-.addBtn {
-  padding: 10px;
-  width: 25%;
-  background: #d9d9d9;
-  color: #555;
-  float: left;
-  text-align: center;
-  font-size: 16px;
-  cursor: pointer;
-  transition: 0.3s;
+MyInput{
+	border: 2px;
+	width: 75%;
+	left: 12.5%;
 }
 
-.addBtn:hover {
-  background-color: #bbb;
+background_input{
+	position:relative
+	left:10%;
+	width:80%;
+	padding: 10px, 10px
+	background-color: grey;
 }
-</style>
-</head>
-<body>
-
-<div id="myDIV" class="header">
-  <h2 style="margin:5px">My To Do List</h2>
-  <input type="text" id="myInput" placeholder="Title...">
-  <span onclick="newElement()" class="addBtn">Add</span>
-</div>
-
-<ul id="myUL">
-  <li>Hit the gym</li>
-  <li class="checked">Pay bills</li>
-  <li>Meet George</li>
-  <li>Buy eggs</li>
-  <li>Read a book</li>
-  <li>Organize office</li>
-</ul>
 
 
 

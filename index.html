@@ -8,9 +8,9 @@
 <body>
 
   <header>
-    <ul>
-      <li>Make your shopping list</li>
-      <li>Info</li>
+    <ul class="top">
+      <li class="top">Make your shopping list</li>
+      <li class="top">Info</li>
     </ul>
   </header>
   
@@ -20,31 +20,26 @@
   </div>
 
   <div class="List">
-    <h4>Question 1</h4>
     <h2>this is your current shopping list</h2>
 	
 
-    <ul id="table">
-	
+    <ul class="table" id="mainUL">
+		<li class="parttable"> shit </li>
+		<li class="parttable"> more shit </li>
 	</ul>
   </div>
 
   <div class="Adding">
-    <h4>Do you want to add anything to your shopping list</h4>
-
-<div id="input" class="header">
-  <h2>My To Do List</h2>
-  <input type="text" id="myInput" placeholder="Title...">
-  <span onclick="newElement()" class="addBtn">Add</span>
+    <h4>Is there anything else you want to add to your shopping list</h4>
 </div>
-	
-	
-  </div>
+<div id="background_input">
+<div id="input" class="header">
+  <input type="text" id="myInput" placeholder="Title...">  
+</div>
+</div>
 
-  <div class="button">
-    <h4>submit</h4>
-    
-  </div>
+ 
+<span onclick="newElement()" class="button"><h4>Add</h4></span>
 
 
   <footer>
@@ -52,7 +47,7 @@
   </footer>
 <script>
 // Create a "close" button and append it to each list item
-var myNodelist = document.getElementsByTagName("LI");
+var myNodelist = document.getElementsByClassName("parttable");
 var i;
 for (i = 0; i < myNodelist.length; i++) {
   var span = document.createElement("SPAN");
@@ -73,7 +68,7 @@ for (i = 0; i < close.length; i++) {
 }
 
 // Add a "checked" symbol when clicking on a list item
-var list = document.querySelector('ul');
+var list = document.querySelector('ul.table');
 list.addEventListener('click', function(ev) {
   if (ev.target.tagName === 'LI') {
     ev.target.classList.toggle('checked');
@@ -89,7 +84,7 @@ function newElement() {
   if (inputValue === '') {
     alert("You must write something!");
   } else {
-    document.getElementById("table").appendChild(li);
+    document.getElementById("mainUL").appendChild(li);
   }
   document.getElementById("myInput").value = "";
 
@@ -98,6 +93,7 @@ function newElement() {
   span.className = "close";
   span.appendChild(txt);
   li.appendChild(span);
+  li.className= "parttable";
 
   for (i = 0; i < close.length; i++) {
     close[i].onclick = function() {
